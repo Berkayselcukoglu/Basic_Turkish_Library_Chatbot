@@ -1,67 +1,58 @@
-# Kütüphane Chatbot
+# Basic Turkish Library Chatbot
+A PyQt5-based interactive chatbot application that provides quick access to frequently asked questions about library services and policies.
 
-Kütüphane hizmetleri ve politikaları hakkında sık sorulan sorulara hızlı erişim sağlayan PyQt5 tabanlı etkileşimli chatbot uygulaması.
+## Features
+- Modern chat interface
+- Category-based question and answer system
+- Natural language processing support
+- Real-time response system
 
-## Özellikler
+## Technical Architecture
+The application consists of three main components:
+- `chatbot_window.py`: Manages GUI and user interactions
+- `chatbot_logic.py`: Handles core chatbot functionality and query processing
+- `faq.json`: Stores categorized questions and answers
 
-- Modern sohbet arayüzü
-- Kategori bazlı soru-cevap sistemi
-- Doğal dil işleme desteği
-- Gerçek zamanlı yanıt sistemi
+## Chatbot Logic
+The chatbot uses string matching algorithms to process user queries:
+- Fuzzy matching with 0.6 similarity threshold
+- Supports both direct matches and similar question suggestions
+- Hierarchical category-question structure
+- Context-aware responses with category information
 
-## Teknik Mimari
+## User Interface
+Built with PyQt5:
+- Different styling for user and bot messages
+- Dynamic button creation for categories and questions
+- Automatic scrolling for new messages
+- Input field with button and Enter key support
+- Responsive layout adapted to content
 
-Uygulama üç ana bileşenden oluşur:
-
-- `chatbot_window.py`: GUI ve kullanıcı etkileşimlerini yönetir
-- `chatbot_logic.py`: Temel chatbot işlevselliği ve soru işleme
-- `faq.json`: Kategorize edilmiş soru ve cevapları saklar
-
-## Chatbot Mantığı
-
-Chatbot, kullanıcı sorgularını işlemek için dizi eşleştirme algoritmaları kullanır:
-- 0.6 benzerlik eşiği ile bulanık eşleştirme
-- Hem doğrudan eşleşmeleri hem de benzer soru önerilerini destekler
-- Hiyerarşik kategori-soru yapısı
-- Kategori bilgisi ile bağlam duyarlı yanıtlar
-
-## Kullanıcı Arayüzü
-
-PyQt5 ile inşa edilmiş:
-- Kullanıcı ve bot mesajları için farklı stiller
-- Kategoriler ve sorular için dinamik buton oluşturma
-- Yeni mesajlar için otomatik kaydırma
-- Buton ve Enter tuşu desteği ile giriş alanı
-- İçeriğe göre uyarlanan duyarlı düzen
-
-## Kurulum
-
-1. Gerekli bağımlılıkları yükleyin:
+## Installation
+1. Install required dependencies:
 ```bash
 pip install PyQt5
 ```
 
-2. Depoyu klonlayın:
+2. Clone the repository:
 ```bash
 git clone [repository-url]
 cd library-chatbot
 ```
 
-3. Uygulamayı çalıştırın:
+3. Run the application:
 ```bash
 python chatbot_window.py
 ```
 
-## Kullanım
+## Usage
+1. Launch the application
+2. Select a category from the main menu
+3. Choose a specific question or type your query
+4. View the response and use follow-up options
+5. Navigate through different categories or ask additional questions
 
-1. Uygulamayı başlatın
-2. Ana menüden bir kategori seçin
-3. Belirli bir soru seçin veya sorgunuzu yazın
-4. Yanıtı görüntüleyin ve takip seçeneklerini kullanın
-5. Farklı kategorilerde gezinin veya ek sorular sorun
-
-## Bağımlılıklar
-
+## Dependencies
 - Python 3.6+
 - PyQt5
 - json
